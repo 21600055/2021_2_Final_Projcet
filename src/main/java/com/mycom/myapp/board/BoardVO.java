@@ -3,54 +3,76 @@ package com.mycom.myapp.board;
 import java.util.Date;
 
 public class BoardVO {
-	private int seq;
-	private String title;
-	private String writer;
-	private String content;
-	private String category;
-	private Date regdate;
-	private int cnt;
 	
-	public int getSeq() {
-		return seq;
+	private int ID;
+	private String yangdo;
+	private String category;
+	private String address;
+	private Date startdate;
+	private Date enddate;
+	private int price;
+	private int imageindex;
+	private String openchatlink;
+	private int writerid;
+	
+	public int getID() {
+		return ID;
 	}
-	public void setSeq(int seq) {
-		this.seq = seq;
+	public void setID(int iD) {
+		ID = iD;
 	}
-	public String getTitle() {
-		return title;
+	public String getYangdo() {
+		return yangdo;
 	}
-	public void setTitle(String title) {
-		this.title = title;
-	}
-	public String getWriter() {
-		return writer;
-	}
-	public void setWriter(String writer) {
-		this.writer = writer;
-	}
-	public String getContent() {
-		return content;
-	}
-	public void setContent(String content) {
-		this.content = content;
-	}
-	public Date getRegdate() {
-		return regdate;
-	}
-	public void setRegdate(Date regdate) {
-		this.regdate = regdate;
-	}
-	public int getCnt() {
-		return cnt;
-	}
-	public void setCnt(int cnt) {
-		this.cnt = cnt;
+	public void setYangdo(String yangdo) {
+		this.yangdo = yangdo;
 	}
 	public String getCategory() {
 		return category;
 	}
 	public void setCategory(String category) {
 		this.category = category;
+	}
+	public String getAddress() {
+		return address;
+	}
+	public void setAddress(String address) {
+		this.address = address;
+	}
+	public Date getStartdate() {
+		return startdate;
+	}
+	public void setStartdate(Date startdate) {
+		this.startdate = startdate;
+	}
+	public Date getEnddate() {
+		return enddate;
+	}
+	public void setEnddate(Date enddate) {
+		this.enddate = enddate;
+	}
+	public int getPrice() {
+		return price;
+	}
+	public void setPrice(int price) {
+		this.price = price;
+	}
+	public int getImageindex() {
+		return imageindex;
+	}
+	public void setImageindex(int imageindex) {
+		this.imageindex = imageindex;
+	}
+	public String getOpenchatlink() {
+		return openchatlink;
+	}
+	public void setOpenchatlink(String openchatlink) {
+		this.openchatlink = openchatlink;
+	}
+	public int getWriterid() {
+		return writerid;
+	}
+	public void setWriterid(int writerid) {
+		this.writerid = writerid;
 	}
 }

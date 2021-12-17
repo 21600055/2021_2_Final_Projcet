@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="Board">
+
+	<insert id="insertBoard">
+		Insert into Community
+		(yangdo,category,address,startdate,enddate,price,imageindex,openchatlink,writerid)
+		values
+		(#{yangdo},#{category},#{address},#{startdate},#{enddate},#{price},#{imageindex},#{openchatlink},#{writerid})
+	</insert>
+
+	<update id="updateBoard">
+		Update Community
+		set yangdo = #{yangdo}, category =
+		#{category}, address = #{address}, startdate = #{startdate}, enddate =
+		#{enddate}, price = #{price}, openchatlink = #{openchatlink}
+		where ID =
+		#{ID}
+	</update>
+
+	<delete id="deleteBoard">
+		delete from Community where ID = #{ID}
+	</delete>
+
+	<select id="getBoard" resultType="board">
+		select * from Community where
+		ID = #{ID}
+	</select>
+
+	<select id="getBoardList" resultType="board">
+		select * from Community
+		order by ID desc
+	</select>
+
+	<insert id="insertMember">
+		Insert into Member (MemberID,Name,Password)
+		values
+		(#{MemberID},#{Name},#{password})
+	</insert>
+
+	<update id="updateMember">
+		Update Member
+		set MemberID = #{MemberID}, Name =
+		#{Name}, Password = #{password}
+		where ID = #{ID}
+	</update>
+
+	<delete id="deleteMember">
+		delete from Member where ID = #{ID}
+	</delete>
+
+	<select id ="getMember">
+		select * from Member where ID = #{ID}
+	</select>
+	
+	<insert id="insertimg">
+		insert into Image (image)
+		values
+		(#{image})
+	</insert>
+
+	<select id="getimg">
+		select image from Image where ID = #{imageindex}
+	</select>
+
+	<update id="updateimg">
+		
+	</update>
+</mapper>

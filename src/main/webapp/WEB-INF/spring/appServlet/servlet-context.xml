@@ -29,7 +29,7 @@
 
 	<context:component-scan
 		base-package="com.mycom.myapp" />
-
+<!--  
 	<beans:bean id="ds"
 		class="org.springframework.jdbc.datasource.DriverManagerDataSource">
 		<beans:property name="driverClassName"
@@ -46,5 +46,5 @@
 	<beans:bean id="dao" class="com.mycom.myapp.board.BoardDAO">
 		<beans:property name="template" ref="jt"></beans:property>
 	</beans:bean>
-
+-->
 </beans:beans>

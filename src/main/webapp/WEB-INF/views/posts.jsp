@@ -40,23 +40,27 @@
 
 <table id="list" width="90%">
 <tr>
-	<th>Id</th>
-	<th>Title</th>
-	<th>Writer</th>
-	<th>Content</th>
-	<th>Category</th>
-	<th>Regdate</th>
-	<th>Edit</th>
-	<th>Delete</th>
+	<th>ID</th>
+	<th>양도</th>
+	<th>종류</th>
+	<th>주소</th>
+	<th>시작 기간</th>
+	<th>만료 기간</th>
+	<th>가격</th>
+	<th>오픈채팅링크</th>
+	<th>수정</th>
+	<th>삭제</th>
 </tr>
 <c:forEach items="${list}" var="u">
 	<tr>
-		<td>${u.getSeq()}</td>
-		<td>${u.getTitle()}</td>
-		<td>${u.getWriter()}</td>
-		<td>${u.getContent()}</td>
+		<td>${u.getID()}</td>
+		<td>${u.getYangdo()}</td>
 		<td>${u.getCategory()}</td>
-		<td>${u.getRegdate()}</td>
+		<td>${u.getAddress()}</td>
+		<td>${u.getStartdate()}</td>
+		<td>${u.getEnddate()}</td>
+		<td>${u.getPrice()}</td>
+		<td>${u.getOpenchatlink()}</td>
 		<td><a href="editform/${u.seq}">Edit</a></td>
 		<td><a href="javascript:delete_ok('${u.seq}')">Delete</a></td>
 	</tr>
