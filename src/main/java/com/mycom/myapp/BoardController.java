@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import com.mycom.myapp.board.BoardDAO;
+import com.mycom.myapp.board.BoardService;
 import com.mycom.myapp.board.BoardVO;
 
 @Controller
@@ -26,9 +26,9 @@ public class BoardController {
 	/**
 	 * Simply selects the home view to render by returning its name.
 	 */
-
+	
 	@Autowired
-	BoardDAO boardDAO;
+	BoardService boardService;
 
 	@RequestMapping(value = "/", method = RequestMethod.GET)
 	public String home(Locale locale, Model model) {
@@ -53,7 +53,7 @@ public class BoardController {
 	@RequestMapping(value = "/board/list", method = RequestMethod.GET)
 	public String boardlist(Model model) {
 		logger.info("post.jsp loaded");
-		model.addAttribute("list", boardDAO.getBoardList());
+		model.addAttribute("list", boardService.getBoardList());
 		return "posts";
 	}
 
@@ -66,7 +66,7 @@ public class BoardController {
 	@RequestMapping(value = "/board/addok", method = RequestMethod.POST)
 	public String addPostOk(BoardVO vo) {
 		logger.info("addpostform.jsp loaded");
-		int i = boardDAO.insertBoard(vo);
+		int i = boardService.insertBoard(vo);
 		if (i == 0)
 			System.out.println("데이터 추가 실패");
 		else
@@ -77,7 +77,7 @@ public class BoardController {
 	@RequestMapping(value = "/board/editform/{id}", method = RequestMethod.GET)
 	public String editPost(@PathVariable("id") int id, Model model) {
 		logger.info("editpostform.jsp loaded");
-		BoardVO boardVO = boardDAO.getBoard(id);
+		BoardVO boardVO = boardService.getBoard(id);
 		model.addAttribute("boardVO", boardVO);
 		return "editform";
 	}
@@ -85,7 +85,7 @@ public class BoardController {
 	@RequestMapping(value = "/board/editok", method = RequestMethod.POST)
 	public String editPostOK(BoardVO vo) {
 		logger.info("editok.jsp loaded");
-		int i = boardDAO.updateBoard(vo);
+		int i = boardService.updateBoard(vo);
 		if (i == 0)
 			System.out.println("데이터 수정 실패");
 		else
@@ -95,7 +95,7 @@ public class BoardController {
 
 	@RequestMapping(value = "/board/deleteok/{id}", method = RequestMethod.GET)
 	public String deletePost(@PathVariable("id") int id) {
-		int i = boardDAO.deleteBoard(id);
+		int i = boardService.deleteBoard(id);
 		if (i == 0)
 			System.out.println("데이터 삭제 실패");
 		else
