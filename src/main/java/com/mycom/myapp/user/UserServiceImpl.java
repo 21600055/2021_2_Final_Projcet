@@ -33,7 +33,7 @@ public class UserServiceImpl implements UserService {
 	}
 
 	@Override
-	public int CountUser(UserVO vo) {
+	public UserVO CountUser(UserVO vo) {
 		// TODO Auto-generated method stub
 		return userDAO.CountUser(vo);
 	}

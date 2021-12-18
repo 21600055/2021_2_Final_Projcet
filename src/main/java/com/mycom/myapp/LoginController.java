@@ -57,16 +57,18 @@ public class LoginController {
 
 	@RequestMapping(value = "/registerok", method = RequestMethod.POST)
 	public String registerok(UserVO vo) {
-		int ct = service.CountUser(vo);
-		if (ct > 0) {
+		/*
+		UserVO ct = service.CountUser(vo);
+		if (ct!=null) {
 			return "login";
 		} else {
+			*/
 			int i = service.insertUser(vo);
 			if (i == 0)
 				System.out.println("회원가입 성공");
 			else
 				System.out.println("회원가입 실패");
-		}
+		//}
 		return "login";
 	}
 }
