@@ -42,7 +42,7 @@ body {
 </head>
 <body>
 <h1>양도게시판</h1>
-<h2>안녕하세요</h2> <a href="../logout">logout</a>
+<h2>안녕하세요</h2> <a href="../login/logout">logout</a>
 <table id="list" width="90%">
 <tr>
 	<th>ID</th>

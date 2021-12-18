@@ -44,7 +44,7 @@ public class LoginController {
 	}
 
 	// 로그아웃하는부분
-	@RequestMapping(value = "../logout",method = RequestMethod.GET)
+	@RequestMapping(value = "/logout",method = RequestMethod.GET)
 	public String logout(HttpSession session) {
 		session.invalidate();
 		return "redirect:/login/login";
