@@ -55,14 +55,10 @@ a {
 </head>
 <body>
 <h1>양도게시판</h1>
-<<<<<<< HEAD
 <br>
 <a href="../login/logout">logout</a>
 <br>
 <br>
-=======
-<h2>안녕하세요</h2> <a href="../login/logout">logout</a>
->>>>>>> b2c6d5f79fd5cb42204dd8b538c5119f4986f023
 <table id="list" width="90%">
 <tr>
 	<th>ID</th>
