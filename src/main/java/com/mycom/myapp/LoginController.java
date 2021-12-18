@@ -44,7 +44,7 @@ public class LoginController {
 	}
 
 	// 로그아웃하는부분
-	@RequestMapping(value = "/logout")
+	@RequestMapping(value = "../logout",method = RequestMethod.GET)
 	public String logout(HttpSession session) {
 		session.invalidate();
 		return "redirect:/login/login";
@@ -69,6 +69,6 @@ public class LoginController {
 			else
 				System.out.println("회원가입 실패");
 		//}
-		return "login";
+		return "redirect:/login/login";
 	}
 }

@@ -6,6 +6,8 @@ import java.util.Date;
 import java.util.List;
 import java.util.Locale;
 
+import javax.servlet.http.HttpSession;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,6 +19,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.mycom.myapp.board.BoardService;
 import com.mycom.myapp.board.BoardVO;
+import com.mycom.myapp.user.UserService;
 
 @Controller
 public class BoardController {
@@ -29,6 +32,8 @@ public class BoardController {
 	
 	@Autowired
 	BoardService boardService;
+	@Autowired
+	UserService service;
 
 	@RequestMapping(value = "/", method = RequestMethod.GET)
 	public String home(Locale locale, Model model) {
@@ -63,8 +68,20 @@ public class BoardController {
 		return "addpostform";
 	}
 
+//	@RequestMapping(value = "/board/addok", method = RequestMethod.POST)
+//	public String addPostOk(BoardVO vo) {
+//		logger.info("addpostform.jsp loaded");
+//		int i = boardService.insertBoard(vo);
+//		if (i == 0)
+//			System.out.println("데이터 추가 실패");
+//		else
+//			System.out.println("데이터 추가 성공");
+//	
+//		return "redirect:list";
+//	}
+	
 	@RequestMapping(value = "/board/addok", method = RequestMethod.POST)
-	public String addPostOk(BoardVO vo) {
+	public String addPostOk(HttpSession session,BoardVO vo) {
 		logger.info("addpostform.jsp loaded");
 		int i = boardService.insertBoard(vo);
 		if (i == 0)
@@ -82,7 +99,7 @@ public class BoardController {
 		model.addAttribute("boardVO", boardVO);
 		return "editform";
 	}
-
+	
 	@RequestMapping(value = "/board/editok", method = RequestMethod.POST)
 	public String editPostOK(BoardVO vo) {
 		logger.info("editok.jsp loaded");
