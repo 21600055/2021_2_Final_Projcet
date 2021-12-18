@@ -8,6 +8,7 @@
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
 <style>
+@import url(//fonts.googleapis.com/earlyaccess/nanumpenscript.css);
 body {
 	background-image: url(../img/wallpaperbetter.jpg);
 	background-repeat: no-repeat;
@@ -19,7 +20,9 @@ div{
 	margin-bottom: 3%;
 }
 h1{
-	padding-legt: 550px;
+	font-family: 'Nanum Pen Script', cursive;
+	text-align: center;
+	font-size: 70px;
 }
 </style>
 </head>

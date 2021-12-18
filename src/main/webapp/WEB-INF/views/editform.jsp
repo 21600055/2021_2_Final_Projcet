@@ -9,9 +9,28 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+<style>
+@import url(//fonts.googleapis.com/earlyaccess/nanumpenscript.css);
+body {
+	background-image: url(../../img/wallpaperbetter.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	padding-left: 500px;
+	padding-right: 500px;
+}
+div{
+	margin-bottom: 3%;
+}
+h1{
+	font-family: 'Nanum Pen Script', cursive;
+	text-align: center;
+	font-size: 70px;
+}
+</style>
 </head>
 <body>
-
 	<h1>게시물 수정</h1>
 	<form:form commandName="boardVO" method="POST" action="../editok">
 		<form:hidden path="ID" />
@@ -49,6 +68,5 @@
 		<button type="button" onclick="location.href='../list'">목록보기</button>
 		<button type="submit">등록하기</button>
 	</form:form>
-
 </body>
 </html>
