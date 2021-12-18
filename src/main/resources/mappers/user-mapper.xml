@@ -7,4 +7,26 @@
 	where MemberID= #{userid} and password=#{password}
 </select>
 
+<select id = "valid" resultType="user">
+	select count(MemberID) from Member
+	where MemberID = #{userid}
+</select>
+
+<insert id = "insertUser">
+	Insert into Member
+	(MemberID,Name,Password)
+	values
+	(#{userid},#{username},#{password})
+</insert>
+
+<update id = "updateUser">
+	Update Member
+	set Name = #{username}, Password = #{password}
+	where ID = #{ID}
+</update>
+
+<delete id = "deleteUser">
+	Delete from Member where ID = #{ID}
+</delete>
+
 </mapper>

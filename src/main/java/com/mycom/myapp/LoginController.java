@@ -1,5 +1,7 @@
 package com.mycom.myapp;
 
+import java.io.PrintWriter;
+
 import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,10 +21,10 @@ public class LoginController {
 	@RequestMapping(value = "/login", method = RequestMethod.GET)
 	public String login() {
 		return "login";
-		}
+	}
 
-	@RequestMapping(value="/loginOk",method=RequestMethod.POST)
-	public String loginCheck(HttpSession session,UserVO vo){
+	@RequestMapping(value = "/loginOk", method = RequestMethod.POST)
+	public String loginCheck(HttpSession session, UserVO vo) {
 		String returnURL = "";
 		if (session.getAttribute("login") != null) {
 			session.removeAttribute("login");
@@ -33,19 +35,38 @@ public class LoginController {
 			System.out.println("로그인성공!");
 			session.setAttribute("login", loginvo);
 			returnURL = "redirect:../board/list";
-		}else {
+		} else {
 			// 로그인실패
 			System.out.println("로그인실패!");
 			returnURL = "redirect:/login/login";
 		}
 		return returnURL;
 	}
-	
+
 	// 로그아웃하는부분
-	@RequestMapping(value="/logout")
+	@RequestMapping(value = "/logout")
 	public String logout(HttpSession session) {
 		session.invalidate();
-		return"redirect:/login/login";
+		return "redirect:/login/login";
+	}
+
+	@RequestMapping(value = "/register", method = RequestMethod.GET)
+	public String register(UserVO vo) {
+		return "register";
+	}
+
+	@RequestMapping(value = "/registerok", method = RequestMethod.POST)
+	public String registerok(UserVO vo) {
+		int ct = service.CountUser(vo);
+		if (ct > 0) {
+			return "login";
+		} else {
+			int i = service.insertUser(vo);
+			if (i == 0)
+				System.out.println("회원가입 성공");
+			else
+				System.out.println("회원가입 실패");
+		}
+		return "login";
 	}
 }
-

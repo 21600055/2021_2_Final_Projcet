@@ -55,8 +55,8 @@ button {
 	<br>
 	<button type='submit'>로그인
 	</button>
-	<button type='submit'>회원가입</button>
 	</form>
+	<button type='button' onclick = "location.href='register'">회원가입</button>
 	</div>
 </body>
 </html>

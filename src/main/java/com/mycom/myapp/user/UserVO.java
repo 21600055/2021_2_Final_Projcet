@@ -2,9 +2,18 @@ package com.mycom.myapp.user;
 
 public class UserVO {
 
+	private int ID;
 	private String userid;
 	private String password;
 	private String username;
+	
+	
+	public int getID() {
+		return ID;
+	}
+	public void setID(int iD) {
+		ID = iD;
+	}
 	public String getUserid() {
 		return userid;
 	}
