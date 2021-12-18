@@ -71,6 +71,7 @@ public class BoardController {
 			System.out.println("데이터 추가 실패");
 		else
 			System.out.println("데이터 추가 성공");
+	
 		return "redirect:list";
 	}
 
@@ -102,4 +103,6 @@ public class BoardController {
 			System.out.println("데이터 삭제 성공");
 		return "redirect:../list";
 	}
+	
+	
 }

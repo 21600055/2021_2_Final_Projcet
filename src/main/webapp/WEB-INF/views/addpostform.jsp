@@ -14,8 +14,8 @@
 			<tr>
 				<td>양도:</td>
 				<td><select name="yangdo">
-						<option value="give">양도 하기</option>
-						<option value="receive">양도 받기</option>
+						<option value="양도 하기">양도 하기</option>
+						<option value="양도 받기">양도 받기</option>
 				</select></td>
 			</tr>
 			<tr>

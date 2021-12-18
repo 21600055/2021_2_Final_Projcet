@@ -48,6 +48,7 @@
 	<th>만료 기간</th>
 	<th>가격</th>
 	<th>오픈채팅링크</th>
+	<th>사진</th>
 	<th>수정</th>
 	<th>삭제</th>
 </tr>
@@ -61,8 +62,9 @@
 		<td>${u.getEnddate()}</td>
 		<td>${u.getPrice()}</td>
 		<td>${u.getOpenchatlink()}</td>
-		<td><a href="editform/${u.seq}">Edit</a></td>
-		<td><a href="javascript:delete_ok('${u.seq}')">Delete</a></td>
+		<td><a href="">이미지 링크</a></td>
+		<td><a href="editform/${u.getID()}">Edit</a></td>
+		<td><a href="javascript:delete_ok('${u.getID()}')">Delete</a></td>
 	</tr>
 </c:forEach>
 </table>

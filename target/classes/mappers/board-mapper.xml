@@ -4,9 +4,16 @@
 
 	<insert id="insertBoard">
 		Insert into Community
-		(yangdo,category,address,startdate,enddate,price,imageindex,openchatlink,writerid)
+		(yangdo,category,address,startdate,enddate,price,image,openchatlink,writerid)
 		values
-		(#{yangdo},#{category},#{address},#{startdate},#{enddate},#{price},#{imageindex},#{openchatlink},#{writerid})
+		(#{yangdo},#{category},#{address},#{startdate},#{enddate},#{price},#{image},#{openchatlink},#{writerid})
+	</insert>
+
+	<insert id="insertBoard1">
+		Insert into Community
+		(yangdo,category,address,startdate,enddate,price,image,openchatlink)
+		values
+		(#{yangdo},#{category},#{address},#{startdate},#{enddate},#{price},#{image},#{openchatlink})
 	</insert>
 
 	<update id="updateBoard">
@@ -49,21 +56,7 @@
 		delete from Member where ID = #{ID}
 	</delete>
 
-	<select id ="getMember">
+	<select id="getMember">
 		select * from Member where ID = #{ID}
 	</select>
-	
-	<insert id="insertimg">
-		insert into Image (image)
-		values
-		(#{image})
-	</insert>
-
-	<select id="getimg">
-		select image from Image where ID = #{imageindex}
-	</select>
-
-	<update id="updateimg">
-		
-	</update>
 </mapper>
