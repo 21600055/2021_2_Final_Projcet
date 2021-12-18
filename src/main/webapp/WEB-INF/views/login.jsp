@@ -6,6 +6,7 @@ pageEncoding="UTF-8"%>
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
 <style>
 body {
 	background-image: url(../img/wallpaperbetter.jpg);
@@ -21,7 +22,8 @@ fullname {
 	font-size: 20px;
 	color: #CCCCFF;
 	display: block;
-	}
+	font-weight:bold;
+}
 label {
 	color: #666699;
 	display: inline-block;
