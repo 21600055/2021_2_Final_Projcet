@@ -8,10 +8,22 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>free board</title>
 <style>
+@import url(//fonts.googleapis.com/earlyaccess/nanumpenscript.css);
 body {
 	background-image: url(../img/wallpaperbetter.jpg);
 	background-repeat: no-repeat;
 	background-size: cover;
+}
+h1 {
+	font-family: 'Nanum Pen Script', cursive;
+	text-align: center;
+	font-size: 60px;
+}
+a {
+	padding-left: 18px;
+	text-align: left;
+	font-size: x-large;
+	color: #70658B;
 }
 #list {
   font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
@@ -23,13 +35,14 @@ body {
   padding: 8px;
   text-align:center;
 }
-#list tr:nth-child(even){background-color: #f2f2f2;}
-#list tr:hover {background-color: #ddd;}
+#list tr:nth-child(even){background-color: #EBFBFF;}
+#list tr:nth-child(odd){background-color: #B4B4DC;}
+#list tr:hover {background-color: #D7F1FA;;}
 #list th {
   padding-top: 12px;
   padding-bottom: 12px;
   text-align: center;
-  background-color: #006bb3;
+  background-color: #CC99FF;
   color: white;
 }
 </style>
@@ -42,7 +55,10 @@ body {
 </head>
 <body>
 <h1>양도게시판</h1>
-<h2>안녕하세요</h2> <a href="../logout">logout</a>
+<br>
+<a href="../login/logout">logout</a>
+<br>
+<br>
 <table id="list" width="90%">
 <tr>
 	<th>ID</th>
