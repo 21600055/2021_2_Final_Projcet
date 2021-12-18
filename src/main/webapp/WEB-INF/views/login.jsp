@@ -33,7 +33,8 @@ label {
 button {
 	background-color: #CC99FF;
 	color: white;
-	font-size: 15px
+	font-size: 20px;
+	width: 120px;
 }
 </style>
 </head>
@@ -56,6 +57,7 @@ button {
 	<button type='submit'>로그인
 	</button>
 	</form>
+	<br><br>
 	<button type='button' onclick = "location.href='register'">회원가입</button>
 	</div>
 </body>

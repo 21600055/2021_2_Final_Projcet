@@ -8,6 +8,11 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>free board</title>
 <style>
+body {
+	background-image: url(../img/wallpaperbetter.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+}
 #list {
   font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
   border-collapse: collapse;
