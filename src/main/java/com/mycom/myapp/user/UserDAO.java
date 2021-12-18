@@ -29,8 +29,8 @@ public class UserDAO {
 		return one;
 	}
 	
-	public int CountUser(UserVO vo) {
-		int result = sqlSession.selectOne("User.valid",vo.getID());
-		return result;
+	public UserVO CountUser(UserVO vo) {
+		UserVO one = sqlSession.selectOne("User.valid",vo);
+		return one;
 	}
 }

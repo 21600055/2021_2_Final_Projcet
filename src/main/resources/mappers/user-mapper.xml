@@ -7,8 +7,8 @@
 	where MemberID= #{userid} and password=#{password}
 </select>
 
-<select id = "valid" resultType="user">
-	select count(MemberID) from Member
+<select id = "valid" resultType ="user">
+	select MemberID from Member
 	where MemberID = #{userid}
 </select>
 
