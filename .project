@@ -44,4 +44,11 @@
 		<nature>org.eclipse.wst.common.modulecore.ModuleCoreNature</nature>
 		<nature>org.eclipse.wst.jsdt.core.jsNature</nature>
 	</natures>
+	<linkedResources>
+		<link>
+			<name>src/main/webapp/resources/img/wallpaperbetter.jpg</name>
+			<type>1</type>
+			<location>C:/Users/82109/Downloads/wallpaperbetter.jpg</location>
+		</link>
+	</linkedResources>
 </projectDescription>
