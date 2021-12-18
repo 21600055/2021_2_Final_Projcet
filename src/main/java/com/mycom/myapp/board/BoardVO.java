@@ -1,6 +1,5 @@
 package com.mycom.myapp.board;
 
-import java.sql.Blob;
 import java.sql.Date;
 
 public class BoardVO {
@@ -12,7 +11,6 @@ public class BoardVO {
 	private Date startdate;
 	private Date enddate;
 	private int price;
-	private Blob image;
 	private String openchatlink;
 	private int writerid;
 	
@@ -57,14 +55,6 @@ public class BoardVO {
 	}
 	public void setPrice(int price) {
 		this.price = price;
-	}
-	
-	public Blob getBlob() {
-		return image;
-	}
-	
-	public void setBlob(Blob image) {
-		this.image = image;
 	}
 	
 	public String getOpenchatlink() {

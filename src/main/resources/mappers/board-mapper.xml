@@ -4,16 +4,16 @@
 
 	<insert id="insertBoard">
 		Insert into Community
-		(yangdo,category,address,startdate,enddate,price,image,openchatlink,writerid)
+		(yangdo,category,address,startdate,enddate,price,openchatlink,writerid)
 		values
-		(#{yangdo},#{category},#{address},#{startdate},#{enddate},#{price},#{image},#{openchatlink},#{writerid})
+		(#{yangdo},#{category},#{address},#{startdate},#{enddate},#{price},#{openchatlink},#{writerid})
 	</insert>
 
 	<insert id="insertBoard1">
 		Insert into Community
-		(yangdo,category,address,startdate,enddate,price,image,openchatlink)
+		(yangdo,category,address,startdate,enddate,price,openchatlink)
 		values
-		(#{yangdo},#{category},#{address},#{startdate},#{enddate},#{price},#{image},#{openchatlink})
+		(#{yangdo},#{category},#{address},#{startdate},#{enddate},#{price},#{openchatlink})
 	</insert>
 
 	<update id="updateBoard">
@@ -37,26 +37,5 @@
 	<select id="getBoardList" resultType="board">
 		select * from Community
 		order by ID desc
-	</select>
-
-	<insert id="insertMember">
-		Insert into Member (MemberID,Name,Password)
-		values
-		(#{MemberID},#{Name},#{password})
-	</insert>
-
-	<update id="updateMember">
-		Update Member
-		set MemberID = #{MemberID}, Name =
-		#{Name}, Password = #{password}
-		where ID = #{ID}
-	</update>
-
-	<delete id="deleteMember">
-		delete from Member where ID = #{ID}
-	</delete>
-
-	<select id="getMember">
-		select * from Member where ID = #{ID}
 	</select>
 </mapper>
